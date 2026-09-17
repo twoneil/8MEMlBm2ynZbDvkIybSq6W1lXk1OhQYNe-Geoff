@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Geoff's Itinerary</title>
+
+<!-- ============ Home-screen / PWA meta ============ -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Itinerary">
+<meta name="theme-color" content="#0B1229">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAVQklEQVR4nO3cr7JcS/nH4d6nUASVwuAx0RSOQqG4BwyKO8Aeyx2gMNwDCkXhKHTM8RgqioMNIkwymT1/1sz06n7ffp+n6md+dYrdsyI+316zk5dGSG/evvs4+wwAPXz/4f3L7DPwmj+USQQe4BMDYQ4PfQCxB7iPUbA/D3gHgg/Ql0HQnwfageADjGUQPM8DfJDoA8RgDDzGQ7uD6APEZgxs50HdIPoAORkD13k4Fwg/wBoMgfM8lCOiD7A2Y+ALD6IJP0A1hkDxASD8ALVVHgIlP7jwA3Cs4hAo9YGFH4BrKg2BEh9U+AG4R4Uh8M3sA+xN/AG4V4V2LLtwKvzhAbC/Vd8GLPehhB+APaw2BJb6CkD8AdjLao1ZYs2s9ocCQGwrvA1I/wZA/AEYbYX2pB4AK/wBAJBT9galfIWR/aEDsJaMXwmkewMg/gBEk7FNqQZAxgcMQA3ZGpXilUW2hwpAbRm+Egj/BkD8AcgmQ7tCD4AMDxAAzonesLADIPqDA4BbIrcs5ACI/MAA4B5RmxZuAER9UADwqIhtCzUAIj4gAOghWuPCDIBoDwYAeovUuhADINIDAYA9RWne9AEQ5UEAwCgR2jd1AER4AAAww+wGThsAsz84AMw2s4VTBoD4A8Ans5o4fACIPwB8bUYbhw4A8QeA80Y3ctgAEH8AuG5kK4cMAPEHgG1GNXP6vwMAAIy3+wBw+weA+4xo564DQPwB4DF7N3S3ASD+APCcPVvqdwAAoKBdBoDbPwD0sVdTuw8A8QeAvvZoa9cBIP4AsI/ejfU7AABQULcB4PYPAPvq2douA0D8AWCMXs31FQAAFPT0AHD7B4CxerTXGwAAKOipAeD2DwBzPNvghweA+APAXM+02FcAAFDQQwPA7R8AYni0yd4AAEBBdw8At38AiOWRNnsDAAAF3TUA3P4BIKZ7G+0NAAAUtHkAuP0DQGz3tNobAAAoaNMAcPsHgBy2NtsbAAAoyAAAgIJuDgCv/wEgly3t9gYAAAq6OgDc/gEgp1sN9wYAAAoyAACgoIsDwOt/AMjtWsu9AQCAggwAACjo7ADw+h8A1nCp6d4AABDGP/70fvYRyvjB7AMAwCH8P//tu8knqePVAPD6H4BR/vO39+39d7NPsb43b999/P7D+5fj/583AAAMdwj/cfzd/scyAAAY5j9/+/Sq//TWL/7jGQAA7O5S+Jnnq+8DfP8PQE+H8Ld2Of5u/+Mc/x6ANwAAdLcl/K2J/0wGAADdbA0/8xkAADztOPytbYu/2/9cnweA7/8BuNcj4Wee438PwBsAAO52Gv7W7ou/2/98BgAAmz0b/tbEPwoDAICbzoW/Na/8MzMAALiod/jd/uN4ac0vAALwtT1u/OIfx/cf3r94AwDAZ5fC35rX/asxAACKuxb91vqE3+0/HgMAoKhb4W9N/FdmAAAUMyr8xGYAABQxI/xu/3EZAACL2xL+1sS/GgMAYFGzwk8OL/4NAIC1bA1/a/vF3+0/Pm8AABYRIfytiX8WBgBAcveEvzWv/PnEAABIKmL43f7zMAAAkokYfvIxAACSuDf8rY2Nv9t/LgYAQHDRw9+a+GdkAAAE9Uj4W/PKn20MAIBgsoXf7T8nAwAgiEfD35r4cz8DAGCyjOEnPwMAYJLs4Xf7z80AABjsmfC3Jv70YQAADLJC+FmHAQCws2fD31qs+Lv9r8EAANjJauFvTfxXYgAAdNYj/K3Fiz9rMQAAOlk9/G7/azEAAJ60evhZkwEA8KBe4W8tfvzd/tdjAADcqVL4WxP/VRkAABv1DH9rOeLPugwAgBsqh9/tf10GAMAFlcPfmvivzgAAONE7/K3liz/rMwAA/k/4v3D7X58BAJS2R/QPxJ/IDACgJOGnOgMAKGXP8LeWP/5u/3UYAEAJwn+b+NdiAABLE344zwAAlrR3+FtbK/5u//UYAMBShP9+4l+TAQAsYUT4W1sv/tRlAACpCf9z3P7rMgCAlEaFv7V1409tBgCQivD34/ZfmwEApCD8fYk/BgAQ2sjwt1Yj/tCaAQAEJfz7cfunNQMACGZ0+FsTf2oyAIAQhB/GMgCAqWaEv7Wa8Xf755gBAEwh/GOJP6cMAGAo4YcYDABgiFnhb0383f45xwAAdiX8c4k/lxgAwC5mhr818YdbDACgK+GPw+2fawwAoAvhj0X8ucUAAJ4yO/ytiT88wgAAHiL8cbn9s4UBANwlQvhbE394lgEAbCL8Obj9s5UBAFwVJfytif8t4s89DADgLOGHtRkAwFeEPye3f+5lAACttVjhb0387yH+PMIAgMKiRb814YdRDAAoKGL4WxP/R7j98ygDAAoR/rWIP88wAKCAqOFvTfxhFgMAFib863L751kGACxI+Ncm/vRgAMBCIoe/NfGHSAwAWIDw1+H2Ty8GACQWPfytiT9EZQBAQsJfk9s/PRkAkEiG8Lcm/nsQf3ozACAB4Qd6MwAgMOGnNbd/9mEAQEBZwt+a+O9N/NmLAQCBCD8wigEAAWQKf2viP4rbP3syAGAi4ecS8WdvBgBMIPzAbAYADJQt/K2J/wxu/4xgAMAAws9W4s8oBgDsKGP4WxN/qMAAgB0IP49w+2ckAwA6yhr+1sR/NvFnNAMAOhB+IBsDAJ4g/PTg9s8MBgA8IHP4WxN/wACAuwg/vbn9M4sBABtkD39r4h+R+DOTAQBXCD+wKgMAzlgh/K2Jf2Ru/8xmAMAR4WcE8ScCAwCa8AP1GACUtUr0D8Q/B7d/ojAAKEf4mUX8icQAoIzVwt+a+AOPMwBYnvATgds/0RgALGvF8Lcm/hmJPxEZACxH+AFuMwBYhvATkds/URkApLdq+FsT/+zEn8gMANISfoDHGQCks3L4WxP/Vbj9E50BQBrCD9CPAUB4wk82bv9kYAAQ1urhb038VyT+ZGEAEI7wA+zPACCMCuFvTfxX5vZPJgYA0wk/KxB/sjEAmKZK+FsTfyAeA4DhhJ/VuP2TkQHAMFXC/6NffonBP/5U4zNXJv5kZQCwu9XDfxz8Uz//7TsjAAjJAGA3q4b/WvCpxe2fzF7evH33cfYhWMtq4e8RfG8B1iP+ZOcNAN2sEn43fKACbwB4Wvbwjwq+twDrcPtnBd4A8LCs4XfDB/AGgAdkC3+k4HsLkJ/bP6vwBoDNsoQ/UvBZi/izEgOAm6KHP1Pw/bsAQBQGABdFDX+m4LMOt39WYwDwSrTwCz6ziT8rMgD4LEr4Vw++rwGACAwApod/9eCTm9s/q/LXAIuaGX3B/8RbgPjEn5V5A1DMjPALPkA83gAUMTL8gr+dtwBxuf2zOm8AFjci/ILPasSfCgyARe0ZfsHvx98IAGYxABazR/gFn0rc/qnC7wAsomf4BX88bwFiEH8q8QYguR7hF3yAegyApJ4Jv+DDa27/VGMAJPNI+AU/Pr8MCIxmACRxT/gFH+7j9k9FfgkwuC3hF/x1eAswnvhTlTcAQV0Lv+AD8CxvAII5F37Br8VbgHHc/qnMG4AgjsMv+LA/8ae6b2YfoLpD+H/0y3ef/4/ahAkYwQCYTPBhPCMLDAAISaD249nCJwYAABRkAABluP3DFwYABCVWfXme8DUDAAAKMgAgMLfWPjxHeM0AAJYm/nCeAQDBCRiwBwMAWJbxBJcZAJCAkAG9GQDAkowmuM4AgCQEbTvPCm4zAACgIAMAWIrbP2xjAEAi4nad5wPbGQAAUJABAMm45Z7nucB9DAAgPfGH+xkAkJDgAc8yAIDUjCF4jAEASQmfZwDPMAAAoCADABKrfAOu/NmhBwMAAAoyAIB03P7heQYAJFcthtU+L+zFAACAggwAWECVW3GVzwkjGABACuIPfRkAsAiBBO5hAADhGTfQnwEAC1kxlCt+JojAAACAggwAWMxKN+aVPgtEYwAAIYk/7MsAAICCDABYUPbbc/bzQwYGABCK+MMYBgAsSkiBawwAIAyjBcYxAGBhggpcYgAAIRgrMJYBAIvLENYMZ4TVGAAAUJABAAVEvmFHPhuszAAAphF/mMcAAICCDAAoItptO9p5oBoDABhO/GE+AwAKEV7gwAAAhjJCIAYDAIqZGWDxhzgMAAAoyACAgmbcxN3+IRYDANid+EM8BgAUJcpQmwEA7MrQgJgMAAAoyACAwva+nbv9Q1wGALAL8YfYDAAoTqihJgMA6M6ogPgMAKBrsMUfcjAAAKAgAwBorfW5ubv9Qx4GANCF+EMuBgDwmYhDHQYA8DTDAfIxAICniD/kZAAAXxF0qMEAAB5mLEBeBgDwirDD+gwA4CFGAuRmAABnXQu8+EN+BgAAFGQAABedu+m7/cMaDABgM/GHdRgAwFWiD2syAIBNDAFYy8ubt+8+zj4EADCWNwAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUJABAAAFGQAAUNAPZh+Aff30N3+/+d989+dfDDjJmn78x1/d/G/+/bu/DjjJmv71+//e/G9+8ocfDjjJmr799T9v/zd/+dmAkzDDy5u37z7OPgT9bAn+LQbBZVuCf4tBcNmW4N9iEFy2Jfg3/zcMgmUYAIvoEf5ThsAXPcJ/yhD4okf4TxkCX/QI/6v/TUMgPQMguT3Cf6ryENgj/KcqD4E9wn+q8hDYI/yvfoYhkJYBkNSI8J+qNARGhP9UpSEwIvynKg2BEeF/9TMNgXT8LYCEZsR/5s8dbUb8Z/7c0WbEf+bPHW1G/Gf+XB5nACQzO8Kzf/7eZkd49s/f2+wIz/75e5sd4dk/n/sYAIlEiW+Uc/QWJb5RztFblPhGOUdvUeIb5RzcZgAkES260c7zrGjRjXaeZ0WLbrTzPCtadKOdh/MMgASixjbque4VNbZRz3WvqLGNeq57RY1t1HPxhQEQXPTIRj/fLdEjG/18t0SPbPTz3RI9stHPV50BEFiWuGY556kscc1yzlNZ4prlnKeyxDXLOSsyAACgIAMgqGy36mznzXarznbebLfqbOfNdqvOdt4qDAAAKMgACCjbbfogy7mz3aYPspw72236IMu5s96ms557ZQYAABRkAAST5RZ9SfTzZ7lFXxL9/Flu0ZdEP3/2W3T286/GAACAggwAACjIAACAggyAQKJ/f75V1M8R/fvzraJ+jujfn28V9XOs8v35Kp9jBQYAABRkAABAQQYAABRkAABAQQYAABRkAABAQQYAABRkAABAQQZAIN/9+Rezj9BF1M/x79/9dfYRuoj6OX7yhx/OPkIXUT/Ht3/52ewjdLHK51iBAQAABRkAAFCQAQAABRkAwUT9/nyr6OeP+v35VtHPH/X7862inz/79+fZz78aAwAACvrm+w/vX2Yfgq9Fv0VfkuXc0W/Rl2Q5d/Rb9CVZzp31Fp313Kv6/sP7F28AAKAgAyCoLLfpg2znzXKbPsh23iy36YNs5812m8523ioMAAAoyAAILMutOss5T2W5VWc556kst+os5zyV5Vad5ZwVGQDBRY9r9PPdEj2u0c93S/S4Rj/fLdHjGv181RkACUSNbNRz3StqZKOe615RIxv1XPeKGtmo5+ILAyCJaLGNdp5nRYtttPM8K1pso53nWdFiG+08nPdNa5/+PuDsg3BblOhGOUdvUaIb5Ry9RYlulHP0FiW6Uc7BZYfmewOQzOz4zv75e5sd39k/f2+z4zv75+9tdnxn/3zuYwAkNCvCq8f/YFaEV4//wawIrx7/g1kRFv98Pr/6f/P23ceZB+ExP/3N33f/GVXCf86P//ir3X9GlfCf86/f/3f3n1El/Od8++t/7v8zhD+dw1cABsAi9hgClcN/ao8hUDn8p/YYApXDf2qPISD8eb0aAK0ZASvoMQSE/7IeQ0D4L+sxBIT/sh5DQPhzO/6lfwNgcVsGgeA/bssgEPzHbRkEgv+4LYNA8NdiAABAQccDwN8CAICCvhoA/kEgAFjTaeO9AQCAggwAACjIAACAgl4NAL8HAABrOdd2bwAAoCADAAAKOjsAfA0AAGu41HRvAACgIAMAAAq6OAB8DQAAuV1ruTcAAFCQAQAABV0dAL4GAICcbjXcGwAAKOjmAPAWAABy2dJubwAAoCADAAAK2jQAfA0AADlsbbY3AABQ0OYB4C0AAMR2T6u9AQCAgu4aAN4CAEBM9zbaGwAAKOjuAeAtAADE8kibvQEAgIIeGgDeAgBADI822RsAACjo4QHgLQAAzPVMi596A2AEAMAczzbYVwAAUNDTA8BbAAAYq0d7vQEAgIK6DABvAQBgjF7N7fYGwAgAgH31bK2vAACgoK4DwFsAANhH78Z2fwNgBABAX3u0dZevAIwAAOhjr6b6HQAAKGi3AeAtAAA8Z8+W7voGwAgAgMfs3dDdvwIwAgDgPiPa6XcAAKCgIQPAWwAA2GZUM4e9ATACAOC6ka0c+hWAEQAA541u5PDfATACAOBrM9o45ZcAjQAA+GRWE6f9LQAjAIDqZrZw6l8DNAIAqGp2A6f/OwCzHwAAjBahfdMHQGsxHgQAjBCleSEGQGtxHggA7CVS68IMgNZiPRgA6Cla40INgNbiPSAAeFbEtoUbAK3FfFAA8IioTQs5AFqL+8AAYKvILQs7AFqL/eAA4JroDQs9AFqL/wAB4FSGdoU/4LE3b999nH0GALgkQ/gPwr8BOJbpwQJQS7ZGpRoAreV7wACsL2Ob0h34mK8EAJgpY/gP0r0BOJb5wQOQW/YGpR4AreX/AwAgnxXak/4DHPOVAAB7WiH8B+nfABxb6Q8GgFhWa8xSH+aYtwEA9LBa+A+W/FDHDAEAHrFq+A+W+grgnNX/AAHor0I7lv+Ax7wNAOCaCuE/KPNBjxkCAByrFP6Dch/4mCEAUFvF8B+U/eDHDAGAWiqH/6D8AzhmCACsTfi/8CAuMAYA1iD653koNxgCADkJ/3Uezh2MAYDYRH87D+pBxgBADKL/GA+tA2MAYCzRf54HuAODAKAvwe/PAx3AIAC4j+DvzwOexCgA+ETs5/DQgzIQgFUIfEz/A0mp7H2jFnKPAAAAAElFTkSuQmCC">
+
+<!-- ============ Fonts ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Inter:wght@600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#0B1229;
+    --navy-2:#141b3a;
+    --navy-3:#1c2650;
+    --paper:#F5F5F9;
+    --card:#FFFFFF;
+    --ink:#121420;
+    --muted:#888ea3;
+    --muted-2:#c6c9d6;
+    --line:#e7e7ef;
+
+    --blue:#2F6FED;      --blue-soft:#E9F0FF;
+    --green:#17A06B;     --green-soft:#E5F7EF;
+    --orange:#E8790F;    --orange-soft:#FDEEE0;
+    --purple:#8B5CF6;    --purple-soft:#F2ECFE;
+    --yellow:#FFD400;
+
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:10px;
+    --shadow: 0 10px 30px rgba(11,18,41,0.10);
+  }
+
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:#05070f;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Outfit',sans-serif;
+    font-weight:900;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  .mono{font-family:'JetBrains Mono',monospace; font-weight:700;}
+
+  a{color:inherit;}
+  button{font-family:inherit; cursor:pointer;}
+
+  /* ---------- App shell ---------- */
+  .app{
+    max-width:480px;
+    margin:0 auto;
+    min-height:100vh;
+    background:var(--paper);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    box-shadow:var(--shadow);
+  }
+  @media (min-width:481px){
+    body{padding:28px 0;}
+    .app{min-height:calc(100vh - 56px); border-radius:32px; overflow:hidden;}
+  }
+
+  /* ---------- Header ---------- */
+  .header{
+    background:linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#fff;
+    padding:26px 20px 22px;
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  .header-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .header .trip-name{
+    font-size:30px;
+    line-height:1.05;
+    text-transform:none;
+  }
+  .today-btn{
+    flex:0 0 auto;
+    background:var(--yellow);
+    color:var(--navy);
+    border:none;
+    border-radius:20px;
+    padding:9px 16px;
+    font-weight:800;
+    font-size:12.5px;
+    font-family:'Inter',sans-serif;
+    white-space:nowrap;
+    margin-top:2px;
+  }
+  .today-btn:active{opacity:0.85;}
+  .header .trip-sub{
+    margin-top:6px;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    color:#a8b0d0;
+  }
+  .header .trip-sub .flagchip{margin-right:2px;}
+
+  /* ---------- Tab bar ---------- */
+  .tabbar{
+    display:flex;
+    background:var(--navy);
+    border-top:1px solid rgba(255,255,255,0.06);
+    position:sticky;
+    bottom:0;
+    z-index:30;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .tabbar button{
+    flex:1;
+    background:none;
+    border:none;
+    color:#7d84a8;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+    padding:10px 2px 12px;
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:10.5px;
+  }
+  .tabbar button .ic{font-size:19px; line-height:1;}
+  .tabbar button.active{color:var(--yellow);}
+
+  /* ---------- Main scroll area ---------- */
+  .view{
+    flex:1;
+    padding:18px 16px 26px;
+    overflow-y:auto;
+  }
+  .view.hidden{display:none;}
+
+  /* ---------- Date chip strip ---------- */
+  .datebar{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:16px;
+  }
+  .datebar .arrow{
+    flex:0 0 auto;
+    width:34px;height:34px;
+    border-radius:50%;
+    border:none;
+    background:var(--navy);
+    color:var(--yellow);
+    font-size:16px;
+    font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .chips{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:2px 2px 6px;
+    flex:1;
+    scrollbar-width:none;
+  }
+  .chips::-webkit-scrollbar{display:none;}
+  .chip{
+    flex:0 0 auto;
+    min-width:52px;
+    padding:8px 6px;
+    border-radius:14px;
+    background:#fff;
+    border:1px solid var(--line);
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  .chip .wd{font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;}
+  .chip .dn{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:16px;}
+  .chip.active{background:var(--yellow); border-color:var(--yellow);}
+  .chip.active .wd{color:#0B1229; opacity:0.7;}
+  .chip.active .dn{color:#0B1229;}
+
+  .selected-date-heading{
+    font-size:20px;
+    margin:2px 0 14px;
+  }
+
+  /* ---------- Cards (generic) ---------- */
+  .card{
+    background:var(--card);
+    border-radius:var(--radius-lg);
+    padding:16px 16px 15px;
+    margin-bottom:14px;
+    border:1.5px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0;
+    width:6px;
+  }
+  .card.c-blue::before{background:var(--blue);}
+  .card.c-green::before{background:var(--green);}
+  .card.c-orange::before{background:var(--orange);}
+  .card.c-purple::before{background:var(--purple);}
+
+  .card .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    font-size:11px;
+    font-weight:700;
+    padding:4px 9px;
+    border-radius:20px;
+    margin-bottom:10px;
+  }
+  .tag.blue{background:var(--blue-soft); color:var(--blue);}
+  .tag.green{background:var(--green-soft); color:var(--green);}
+  .tag.orange{background:var(--orange-soft); color:var(--orange);}
+  .tag.purple{background:var(--purple-soft); color:var(--purple);}
+
+  .card h3{font-size:17px; margin-bottom:2px;}
+  .card .sub{font-size:12.5px; color:var(--muted); font-weight:600; margin-top:2px;}
+
+  .empty{
+    background:#eceef4;
+    border:1.5px dashed #cfd2e0;
+    border-radius:var(--radius-lg);
+    padding:20px 16px;
+    text-align:center;
+    color:var(--muted);
+    font-weight:600;
+    font-size:13.5px;
+  }
+
+  /* activity rows inside itinerary card */
+  .act-row{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    padding:8px 0;
+    border-top:1px solid var(--line);
+  }
+  .act-row:first-of-type{border-top:none; padding-top:2px;}
+  .act-row .emoji{font-size:18px; width:22px; text-align:center; flex:0 0 auto;}
+  .act-row .time{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:12.5px; color:var(--purple); flex:0 0 64px;}
+  .act-row .txt{font-weight:600; font-size:14px; line-height:1.35;}
+
+  .session-row .time{flex:0 0 64px; padding-top:2px;}
+  .session-body{flex:1; min-width:0;}
+  .track-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    font-size:10.5px;
+    font-weight:700;
+    padding:3px 8px;
+    border-radius:20px;
+    margin-bottom:5px;
+    white-space:nowrap;
+  }
+  .session-speaker{font-family:'Outfit',sans-serif; font-weight:800; font-size:14.5px; line-height:1.25;}
+  .session-role{font-weight:600; font-size:12px; color:var(--muted); margin-top:1px; line-height:1.3;}
+
+  /* flight / hotel / transit route line */
+  .route-line{
+    display:flex; align-items:center; gap:10px; margin:4px 0 10px;
+  }
+  .route-line .city{font-family:'Outfit',sans-serif; font-weight:800; font-size:19px;}
+  .route-line .arrow{color:var(--muted-2); font-size:18px;}
+  .time-grid{
+    display:flex; gap:22px; margin:10px 0 4px;
+  }
+  .time-grid .tblock .lbl{font-size:10.5px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.04em;}
+  .time-grid .tblock .val{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:20px; margin-top:2px;}
+  .meta-row{font-size:12.5px; color:var(--muted); font-weight:600; margin-top:4px; line-height:1.5;}
+  .meta-row b{color:var(--ink);}
+
+  .list-tap{cursor:pointer;}
+  .list-tap:active{opacity:0.85;}
+
+  /* ---------- Section header + add button ---------- */
+  .section-head{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:14px;
+  }
+  .section-head h2{font-size:22px;}
+  .addbtn{
+    background:var(--navy);
+    color:var(--yellow);
+    border:none;
+    border-radius:20px;
+    padding:9px 15px;
+    font-weight:700;
+    font-size:13px;
+    display:flex; align-items:center; gap:6px;
+  }
+
+  /* ---------- Itinerary read-only list ---------- */
+  .day-block{margin-bottom:16px;}
+  .day-block .day-label{
+    font-size:11.5px; font-weight:700; color:var(--purple);
+    text-transform:uppercase; letter-spacing:.05em; margin-bottom:6px;
+  }
+
+  /* ---------- Bottom sheet ---------- */
+  .overlay{
+    position:fixed; inset:0; background:rgba(6,9,20,0.55);
+    display:flex; align-items:flex-end; justify-content:center;
+    z-index:100; opacity:0; pointer-events:none;
+    transition:opacity .18s ease;
+  }
+  .overlay.show{opacity:1; pointer-events:auto;}
+  .sheet{
+    background:#fff;
+    width:100%; max-width:480px;
+    border-radius:24px 24px 0 0;
+    max-height:88vh;
+    overflow-y:auto;
+    padding:10px 20px 26px;
+    transform:translateY(100%);
+    transition:transform .22s ease;
+  }
+  .overlay.show .sheet{transform:translateY(0);}
+  .sheet .grabber{width:40px; height:5px; background:var(--muted-2); border-radius:3px; margin:6px auto 14px;}
+  .sheet h2{font-size:21px; margin-bottom:16px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:11.5px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px;}
+  .field input, .field textarea, .field select{
+    width:100%;
+    border:1.5px solid var(--line);
+    background:#fafafd;
+    border-radius:var(--radius-sm);
+    padding:11px 12px;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+  .field input:focus, .field textarea:focus, .field select:focus{outline:2px solid var(--navy); outline-offset:1px;}
+  .field textarea{resize:vertical; min-height:70px;}
+  .two-col{display:flex; gap:10px;}
+  .two-col .field{flex:1;}
+  .sheet-actions{display:flex; gap:10px; margin-top:6px;}
+  .btn{
+    flex:1; border:none; border-radius:var(--radius-sm);
+    padding:13px; font-weight:700; font-size:14.5px;
+    display:flex; align-items:center; justify-content:center; gap:6px;
+  }
+  .btn.primary{background:var(--navy); color:var(--yellow);}
+  .btn.ghost{background:#eceef4; color:var(--ink);}
+  .btn.danger{background:#fdeaea; color:#c0392b;}
+
+  .toast{
+    position:fixed; left:50%; bottom:90px; transform:translateX(-50%);
+    background:var(--navy); color:#fff; font-weight:700; font-size:13px;
+    padding:11px 18px; border-radius:30px; z-index:200;
+    opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease;
+    box-shadow:0 8px 24px rgba(0,0,0,0.25);
+    white-space:nowrap;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(-4px);}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===================== HEADER ===================== -->
+  <div class="header">
+    <div class="header-top">
+      <h1 class="trip-name display" id="tripNameEl">Trip</h1>
+      <button class="today-btn" onclick="goToToday()">Today</button>
+    </div>
+    <div class="trip-sub" id="tripSubEl">—</div>
+  </div>
+
+  <!-- ===================== TAB VIEWS ===================== -->
+  <div class="view" id="view-today">
+    <div class="datebar">
+      <button class="arrow" id="prevDay">‹</button>
+      <div class="chips" id="chipStrip"></div>
+      <button class="arrow" id="nextDay">›</button>
+    </div>
+    <div class="selected-date-heading display" id="selDateHeading">—</div>
+    <div id="todayBoxes"></div>
+  </div>
+
+  <div class="view hidden" id="view-itinerary">
+    <div class="section-head"><h2 class="display">Itinerary</h2></div>
+    <div id="itineraryList"></div>
+  </div>
+
+  <div class="view hidden" id="view-flights">
+    <div class="section-head">
+      <h2 class="display">Flights</h2>
+      <button class="addbtn" onclick="openSheet('flight')">+ Add flight</button>
+    </div>
+    <div id="flightsList"></div>
+  </div>
+
+  <div class="view hidden" id="view-hotels">
+    <div class="section-head">
+      <h2 class="display">Hotels</h2>
+      <button class="addbtn" onclick="openSheet('hotel')">+ Add hotel</button>
+    </div>
+    <div id="hotelsList"></div>
+  </div>
+
+  <div class="view hidden" id="view-transit">
+    <div class="section-head">
+      <h2 class="display">Transit</h2>
+      <button class="addbtn" onclick="openSheet('transit')">+ Add trip</button>
+    </div>
+    <div id="transitList"></div>
+  </div>
+
+  <!-- ===================== TAB BAR ===================== -->
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="today"><span class="ic">📍</span>Today</button>
+    <button class="tab-btn" data-tab="itinerary"><span class="ic">🗓️</span>Itinerary</button>
+    <button class="tab-btn" data-tab="flights"><span class="ic">✈️</span>Flights</button>
+    <button class="tab-btn" data-tab="hotels"><span class="ic">🏨</span>Hotels</button>
+    <button class="tab-btn" data-tab="transit"><span class="ic">🚐</span>Transit</button>
+  </div>
+</div>
+
+<!-- ===================== BOTTOM SHEET ===================== -->
+<div class="overlay" id="overlay" onclick="if(event.target===this) closeSheet()">
+  <div class="sheet" id="sheet">
+    <div class="grabber"></div>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================================
+   DATA / STATE
+   ========================================================================= */
+const STORAGE_KEY = 'geoffTravelApp_v1';
+
+function uid(){ return Math.random().toString(36).slice(2,10) + Date.now().toString(36); }
+
+function defaultState(){
+  return {
+    trip:{
+      name:"Geoff's Itinerary",
+      subtitle:"Denver → Beaver Creek → Vail → Colorado Springs → Denver · Sep 19 – Oct 2, 2026",
+      startDate:"2026-09-19",
+      endDate:"2026-10-02"
+    },
+    flights:[
+      {id:uid(), fromCity:"Toronto", fromCode:"YYZ", toCity:"Denver", toCode:"DEN",
+       date:"2026-09-19", depTime:"18:40", arrTime:"20:17", airline:"", confirmation:"",
+       price:"", terminal:"Toronto-Pearson International Airport Terminal 1"},
+      {id:uid(), fromCity:"Denver", fromCode:"DEN", toCity:"Toronto", toCode:"YYZ",
+       date:"2026-10-02", depTime:"11:35", arrTime:"16:45", airline:"", confirmation:"",
+       price:"", terminal:"Denver International Airport Terminal A"}
+    ],
+    hotels:[
+      {id:uid(), name:"Grand Hyatt Denver", address:"1750 Welton St, Denver, CO, 80202",
+       checkIn:"2026-09-19", checkOut:"2026-09-21", checkInTime:"4:00 PM (MDT)", checkOutTime:"11:00 AM (MDT)", price:""},
+      {id:uid(), name:"Park Hyatt Beaver Creek", address:"136 East Thomas Place, Beaver Creek, CO, US 81620-1595",
+       checkIn:"2026-09-21", checkOut:"2026-09-25", checkInTime:"4:00 PM", checkOutTime:"11:00 AM", price:""},
+      {id:uid(), name:"Highline Vail - a DoubleTree by Hilton", address:"2211 N Frontage Road West, Vail, CO, 81657",
+       checkIn:"2026-09-25", checkOut:"2026-09-26", checkInTime:"4:00 PM (MDT)", checkOutTime:"11:00 AM (MDT)", price:""},
+      {id:uid(), name:"DoubleTree by Hilton Colorado Springs", address:"1775 East Cheyenne Mountain Blvd, Colorado Springs, CO, 80906",
+       checkIn:"2026-09-26", checkOut:"2026-10-01", checkInTime:"4:00 PM (MDT)", checkOutTime:"12:00 PM (MDT)", price:""},
+      {id:uid(), name:"Hyatt Place Denver South/Park Meadows", address:"9030 E Westview Rd, Denver, CO, 80124",
+       checkIn:"2026-10-01", checkOut:"2026-10-02", checkInTime:"3:00 PM (MDT)", checkOutTime:"12:00 PM (MDT)", price:""}
+    ],
+    transit:[
+      {id:uid(), mode:"Minivan (Louie driving)", fromCity:"Denver", toCity:"Beaver Creek", date:"2026-09-21",
+       duration:"~2h 30m", departureAddress:"Grand Hyatt Denver, 1750 Welton St, Denver, CO 80202",
+       overnight:false, notes:"Lunch stop at a Pho place in Georgetown, roughly midway."},
+      {id:uid(), mode:"Drive", fromCity:"Beaver Creek", toCity:"Vail", date:"2026-09-25",
+       duration:"~20 min", departureAddress:"Park Hyatt Beaver Creek, 136 East Thomas Place, Beaver Creek, CO 81620",
+       overnight:false, notes:"After helping Louie set down, head over together and check in to Highline Vail."},
+      {id:uid(), mode:"Drive", fromCity:"Vail", toCity:"Colorado Springs", date:"2026-09-26",
+       duration:"~4h (with stops)", departureAddress:"Highline Vail, 2211 N Frontage Road West, Vail, CO 81657",
+       overnight:false, notes:"Stops at Pass Lake and Grizzly Peak along the way; lunch midway."},
+      {id:uid(), mode:"Drive", fromCity:"Colorado Springs", toCity:"Denver", date:"2026-10-01",
+       duration:"~1h 20m", departureAddress:"DoubleTree by Hilton Colorado Springs, 1775 East Cheyenne Mountain Blvd, Colorado Springs, CO 80906",
+       overnight:false, notes:""}
+    ],
+    itinerary:[
+      {date:"2026-09-19", title:"Arrival Day", activities:[
+        {time:"8:40 PM", text:"Land in Denver (DEN) after flying in from Toronto"},
+        {time:"9:00 PM", text:"Take an Uber or taxi to the hotel"},
+        {time:"9:30 PM", text:"Check in at Grand Hyatt Denver"},
+        {time:"Evening", text:"Denver Oktoberfest"}
+      ]},
+      {date:"2026-09-20", title:"Denver Oktoberfest", activities:[
+        {time:"All day", text:"Enjoy Denver Oktoberfest"},
+        {time:"Free time", text:"Explore Denver before the drive west"}
+      ]},
+      {date:"2026-09-21", title:"Drive to Beaver Creek", activities:[
+        {time:"9:00 AM", text:"Louie picks up the minivan and you leave the hotel"},
+        {time:"Midday", text:"Lunch at a Pho place in Georgetown, midway"},
+        {time:"1:00 PM", text:"Louie sets up — feel free to help with the set-up"},
+        {time:"4:00 PM", text:"Check in at Park Hyatt Beaver Creek — Paul hands over the key cards, coordinate with Paul"},
+        {time:"4:00 PM", text:"Get your badge at the registration desk"}
+      ]},
+      {date:"2026-09-22", title:"Conference Setup Day", activities:[
+        {time:"8:00 AM", text:"Breakfast near registration"},
+        {time:"11:30 AM", type:"session", track:"Kitco Spotlight", label:"2 of 4", speaker:"Darwin Green", role:"CEO & Director, Mackay Gold & Silver"},
+        {time:"12:00 PM", text:"Lunch"},
+        {time:"12:05 PM", type:"session", track:"Precious Metals Summit", speaker:"Victor Cantore", role:"President & CEO, AMEX Gold Mining"},
+        {time:"12:40 PM", type:"session", track:"Kitco Spotlight", label:"Sponsor", speaker:"Luke Alexander", role:"President and CEO, Newcore Gold"},
+        {time:"1:50 PM", type:"session", track:"Precious Metals Summit", speaker:"Daniel Noone", role:"CEO, G3 Goldfields"},
+        {time:"2:25 PM", type:"session", track:"Precious Metals Summit", speaker:"Florian Grummes", role:"Managing Director, Midas Touch Consulting"},
+        {time:"3:00 PM", type:"session", track:"Kitco Spotlight", label:"3 of 4", speaker:"Jim McDonald", role:"President & CEO, Kootenay Silver"},
+        {time:"4:10 PM", type:"session", track:"Kitco Spotlight", label:"Standalone", speaker:"Drew Clark", role:"President, CEO & Director, Summit Royalties"},
+        {time:"6:00 PM", text:"Cocktail reception"}
+      ]},
+      {date:"2026-09-23", title:"Conference Day 1", activities:[
+        {time:"8:00 AM", text:"Breakfast near registration"},
+        {time:"10:20 AM", type:"session", track:"Precious Metals Summit", speaker:"Dr Diane Nicolson", role:"President & CEO, Amarc Resources"},
+        {time:"10:55 AM", type:"session", track:"Precious Metals Summit", speaker:"Willem Middelkoop", role:"Founder & CEO, Commodity Discovery Fund"},
+        {time:"11:30 AM", type:"session", track:"Kitco Spotlight", label:"2 of 4", speaker:"Andrew Pollard", role:"President & CEO, Blackrock Silver"},
+        {time:"12:00 PM", text:"Lunch"},
+        {time:"12:40 PM", type:"session", track:"Kitco Spotlight", label:"Standalone", speaker:"Diane R. Garrett", role:"Executive Chairman & CEO, Hycroft Mining"},
+        {time:"1:15 PM", type:"session", track:"Precious Metals Summit", speaker:"Ronald-Peter Stöeferle", role:"Managing Partner, Incrementum"},
+        {time:"2:25 PM", type:"session", track:"Kitco Spotlight", label:"Standalone", speaker:"Jalen Yuan", role:"CEO, New Pacific Metals"},
+        {time:"3:35 PM", type:"session", track:"Kitco Spotlight", label:"1 of 4", speaker:"Justin van der Toorn", role:"CEO, Greenheart Gold"},
+        {time:"4:45 PM", type:"session", track:"Precious Metals Summit", speaker:"John Miniotis", role:"CEO, AbraSilver"},
+        {time:"6:00 PM", text:"Cocktail reception"}
+      ]},
+      {date:"2026-09-24", title:"Conference Day 2", activities:[
+        {time:"8:00 AM", text:"Breakfast near registration"},
+        {time:"9:10 AM", type:"session", track:"Precious Metals Summit", speaker:"John Hathaway", role:"Managing Partner, Sprott Asset Management"},
+        {time:"9:10 AM", type:"session", track:"Kitco Spotlight", label:"4 of 4", speaker:"Alan Carter", role:"CEO, Cabral Gold"},
+        {time:"9:45 AM", type:"session", track:"Kitco Spotlight", label:"2 of 4", speaker:"Tony Giardini", role:"CEO, Trilogy Metals"},
+        {time:"10:20 AM", type:"session", track:"Digging Deep", speaker:"David Erfle", role:"Founder & Editor, JuniorMinerJunky.com"},
+        {time:"10:55 AM", type:"session", track:"Digging Deep", speaker:"David Erfle", role:"Founder & Editor, JuniorMinerJunky.com"},
+        {time:"11:30 AM", type:"session", track:"Kitco Spotlight", label:"1 of 4", speaker:"Joaquin Marias", role:"President & CEO, Argenta Silver"},
+        {time:"12:00 PM", text:"Lunch"},
+        {time:"12:05 PM", type:"session", track:"Kitco Spotlight", label:"1 of 4", speaker:"Cor Coe", role:"CEO, Sitka Gold"},
+        {time:"12:40 PM", type:"session", track:"Precious Metals Summit", speaker:"Jon Gilligan", role:"President & CEO, Liberty Gold"},
+        {time:"1:15 PM", type:"session", track:"Kitco Spotlight", label:"Standalone", speaker:"Allen Sabet", role:"CEO, Mogotes Metals"},
+        {time:"2:25 PM", type:"session", track:"Precious Metals Summit", speaker:"Warren Irwin", role:"President & Chief Investment Officer, Rosseau Asset Management"},
+        {time:"3:00 PM", type:"session", track:"Kitco Spotlight", label:"Standalone", speaker:"Ian Harris", role:"President & CEO, Copper Giant"},
+        {time:"4:45 PM", type:"session", track:"Precious Metals Summit", speaker:"Don Durrett / John Feneck", role:"Author & Founder, GoldStockData / Founder & CEO, The Feneck Commodities Report"},
+        {time:"6:00 PM", text:"Cocktail reception"}
+      ]},
+      {date:"2026-09-25", title:"Move to Vail", activities:[
+        {time:"8:00 AM", text:"Breakfast near registration"},
+        {time:"10:30 AM", text:"Check out of Park Hyatt Beaver Creek, bring your luggage"},
+        {time:"10:55 AM", text:"For Geoff to file — paid interview slot"},
+        {time:"11:30 AM", text:"For Geoff to file — paid interview slot"},
+        {time:"12:00 PM", text:"Meet Louie and help with set-down"},
+        {time:"12:05 PM", text:"For Geoff to file — paid interview slot"},
+        {time:"Afternoon", text:"Head to Highline Vail together and check in"}
+      ]},
+      {date:"2026-09-26", title:"Drive to Colorado Springs", activities:[
+        {time:"10:00 AM", text:"Check out of Highline Vail and drive to Colorado Springs"},
+        {time:"En route", text:"Stop by Pass Lake"},
+        {time:"En route", text:"Stop by Grizzly Peak"},
+        {time:"Midday", text:"Lunch midway to Colorado Springs"},
+        {time:"4:00 PM", text:"Check in at DoubleTree by Hilton Colorado Springs"}
+      ]},
+      {date:"2026-09-27", title:"Conference Setup", activities:[
+        {time:"10:00 AM", text:"Quick breakfast"},
+        {time:"12:30 PM", text:"Head to the conference center to get badges and set up"},
+        {time:"2:00 PM", text:"Finish the set-up"},
+        {time:"Afternoon", text:"Coffee & snack at the Broadmoor"}
+      ]},
+      {date:"2026-09-28", title:"Conference Day 1", activities:[
+        {time:"9:00 AM", type:"session", track:"Mining Forum Americas", label:"Sponsor", speaker:"Brett Heath", role:"CEO, Metalla Royalty & Streaming"},
+        {time:"10:00 AM", type:"session", track:"Mining Forum Americas", speaker:"Ari Sussman", role:"Executive Chair, Collective Mining"},
+        {time:"10:30 AM", type:"session", track:"Mining Forum Americas", speaker:"George Bee", role:"President & CEO, U.S. Gold Corp"},
+        {time:"11:00 AM", type:"session", track:"Mining Forum Americas", speaker:"Jamie Beck", role:"President & CEO, Lundin Gold"},
+        {time:"1:00 PM", type:"session", track:"Kitco Spotlight", label:"3 of 4", speaker:"Jorge Ganoza", role:"President & CEO, Fortuna Silver Mines"},
+        {time:"2:00 PM", type:"session", track:"Mining Forum Americas", speaker:"Samantha Sheffield", role:"Director, Corporate Communications, Kinross Gold"},
+        {time:"3:30 PM", type:"session", track:"Mining Forum Americas", speaker:"Ammar Al-Joundi", role:"President & CEO, Agnico Eagle Mines"},
+        {time:"4:00 PM", type:"session", track:"Mining Forum Americas", speaker:"Heather White", role:"CEO, Sunshine Silver Mining & Refining"},
+        {time:"5:00 PM", type:"session", track:"Digging Deep", speaker:"Neil Adshead", role:"Consulting Geologist, Commodity Discovery Fund"}
+      ]},
+      {date:"2026-09-29", title:"Conference Day 2", activities:[
+        {time:"8:30 AM", type:"session", track:"Mining Forum Americas", speaker:"Matthew Rowlinson", role:"President & CEO, Solaris Resources"},
+        {time:"9:00 AM", type:"session", track:"Mining Forum Americas", speaker:"Adam Lundin", role:"CEO, LunR Royalties"},
+        {time:"10:00 AM", type:"session", track:"Mining Forum Americas", speaker:"Mitch Krebs", role:"President & CEO, Coeur Mining"},
+        {time:"11:00 AM", type:"session", track:"Kitco Spotlight", label:"1 of 4", speaker:"Matt Badylak", role:"CEO, Galiano Gold"},
+        {time:"1:00 PM", type:"session", track:"Mining Forum Americas", speaker:"Michael Steinmann", role:"President & CEO, Pan American Silver"},
+        {time:"2:00 PM", type:"session", track:"Kitco Spotlight", label:"1 of 4", speaker:"Robert Quartermain", role:"Co-Chair and CEO, Dakota Gold"},
+        {time:"4:00 PM", type:"session", track:"Mining Forum Americas", speaker:"Daniel Henao", role:"President and CEO, Mineros"},
+        {time:"4:30 PM", type:"session", track:"Mining Forum Americas", speaker:"Paul Brink", role:"President & CEO, Franco-Nevada"},
+        {time:"5:20 PM", type:"session", track:"Mining Forum Americas", speaker:"Thomas Kaplan", role:"Chairman, The Electrum Group"}
+      ]},
+      {date:"2026-09-30", title:"Conference Wrap-up", activities:[
+        {time:"9:00 AM", type:"session", track:"Mining Forum Americas", speaker:"Tim Wood", role:"Executive Director, Denver Gold Group"},
+        {time:"9:30 AM", type:"session", track:"Mining Forum Americas", speaker:"Mike Cinnamond", role:"President & CEO, B2Gold"},
+        {time:"12:00 PM", text:"Help Louie with set-down"},
+        {time:"12:30 PM", text:"Bring equipment to UPS near the hotel"},
+        {time:"3:00 PM", text:"Visit Garden of the Gods"}
+      ]},
+      {date:"2026-10-01", title:"Drive back to Denver", activities:[
+        {time:"12:00 PM", text:"Check out of DoubleTree Colorado Springs and drive to Denver"},
+        {time:"3:00 PM", text:"Check in at Hyatt Place Denver South/Park Meadows"}
+      ]},
+      {date:"2026-10-02", title:"Departure Day", activities:[
+        {time:"Morning", text:"Check out of Hyatt Place"},
+        {time:"Morning", text:"Louie drops you at Denver Airport in time for security"},
+        {time:"11:35 AM", text:"Depart Denver (DEN)"},
+        {time:"4:45 PM", text:"Arrive Toronto (YYZ)"}
+      ]}
+    ]
+  };
+}
+
+let state = loadState();
+let currentTab = 'today';
+let selectedDate = clampToRange(todayISO());
+let editingType = null;
+let editingId = null;
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return defaultState();
+    const parsed = JSON.parse(raw);
+    if(!parsed.trip || !Array.isArray(parsed.flights)) return defaultState();
+    return parsed;
+  }catch(e){ return defaultState(); }
+}
+function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+/* =========================================================================
+   DATE HELPERS
+   ========================================================================= */
+function todayISO(){
+  const d = new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function clampToRange(iso){
+  if(!state) return iso;
+  if(iso < state.trip.startDate) return state.trip.startDate;
+  if(iso > state.trip.endDate) return state.trip.endDate;
+  return iso;
+}
+function parseISO(iso){
+  const [y,m,d] = iso.split('-').map(Number);
+  return new Date(y, m-1, d);
+}
+function addDays(iso, n){
+  const d = parseISO(iso);
+  d.setDate(d.getDate()+n);
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function dateRange(startIso, endIso){
+  const out = [];
+  let cur = startIso;
+  let guard = 0;
+  while(cur <= endIso && guard < 400){
+    out.push(cur);
+    cur = addDays(cur,1);
+    guard++;
+  }
+  return out;
+}
+const WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const MO_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+function fmtChip(iso){
+  const d = parseISO(iso);
+  return {wd:WD[d.getDay()], dn:d.getDate()};
+}
+function fmtShort(iso){
+  if(!iso) return '—';
+  const d = parseISO(iso);
+  return WD[d.getDay()]+', '+MO[d.getMonth()]+' '+d.getDate();
+}
+function fmtLong(iso){
+  if(!iso) return '—';
+  const d = parseISO(iso);
+  return WD[d.getDay()]+', '+MO_FULL[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
+}
+
+/* =========================================================================
+   EMOJI KEYWORD MAP
+   ========================================================================= */
+const EMOJI_MAP = [
+  [['breakfast'], '🍳'],
+  [['lunch'], '🍱'],
+  [['dinner'], '🍽️'],
+  [['cocktail'], '🍸'],
+  [['reception'], '🥂'],
+  [['coffee','snack'], '☕'],
+  [['oktoberfest','beer'], '🍺'],
+  [['wine'], '🍷'],
+  [['museum','gallery'], '🖼️'],
+  [['hike','hiking','trail'], '🥾'],
+  [['castle'], '🏰'],
+  [['beach'], '🏖️'],
+  [['garden'], '🌳'],
+  [['lake'], '🏞️'],
+  [['peak','mountain','summit'], '⛰️'],
+  [['shrine','temple'], '⛩️'],
+  [['market','shopping'], '🛍️'],
+  [['park'], '🌲'],
+  [['badge','registration'], '🪪'],
+  [['set-up','setup','set up'], '🛠️'],
+  [['set-down','setdown','set down','tear down','teardown'], '🧰'],
+  [['conference','session'], '🎤'],
+  [['check in','check-in','checkin'], '🛎️'],
+  [['check out','check-out','checkout'], '🧳'],
+  [['luggage','bags','packing'], '🧳'],
+  [['key card','keycard','key cards','keys'], '🔑'],
+  [['ups'], '📦'],
+  [['file','paperwork'], '🗂️'],
+  [['interview'], '🎙️'],
+  [['coordinate','meet','help','assist'], '🤝'],
+  [['land in','arrive','arrival'], '🛬'],
+  [['depart','fly','flight'], '✈️'],
+  [['airport','security'], '🛫'],
+  [['taxi','uber'], '🚕'],
+  [['drive','driving','minivan','van'], '🚐']
+];
+function getEmoji(text){
+  const t = (text||'').toLowerCase();
+  for(const [keys, emoji] of EMOJI_MAP){
+    for(const k of keys){
+      if(t.includes(k)) return emoji;
+    }
+  }
+  return '📍';
+}
+
+/* =========================================================================
+   COUNTRY FLAG LOOKUP
+   ========================================================================= */
+const FLAG_MAP = {
+  /* US cities get a distinct landmark/theme emoji each, instead of a repeated
+     US flag, so a route full of American stops still reads at a glance. */
+  "colorado springs":"⛰️", "beaver creek":"🦫", "new york":"🗽", "los angeles":"🎬",
+  "san francisco":"🌉", "las vegas":"🎰",
+  "denver":"🏙️", "georgetown":"🍜", "vail":"⛷️",
+  "chicago":"🌆", "seattle":"☕", "miami":"🌴", "boston":"🦞",
+
+  /* Non-US cities keep their country flag. */
+  "hong kong":"🇭🇰", "mexico city":"🇲🇽", "rio de janeiro":"🇧🇷", "buenos aires":"🇦🇷",
+  "toronto":"🇨🇦", "vancouver":"🇨🇦", "montreal":"🇨🇦",
+  "tokyo":"🇯🇵", "osaka":"🇯🇵", "kyoto":"🇯🇵", "paris":"🇫🇷", "london":"🇬🇧",
+  "rome":"🇮🇹", "milan":"🇮🇹", "madrid":"🇪🇸", "barcelona":"🇪🇸", "berlin":"🇩🇪",
+  "munich":"🇩🇪", "amsterdam":"🇳🇱", "dubai":"🇦🇪", "singapore":"🇸🇬", "bangkok":"🇹🇭",
+  "sydney":"🇦🇺", "melbourne":"🇦🇺", "seoul":"🇰🇷", "beijing":"🇨🇳", "shanghai":"🇨🇳",
+  "lisbon":"🇵🇹", "athens":"🇬🇷", "dublin":"🇮🇪", "zurich":"🇨🇭", "vienna":"🇦🇹",
+  "istanbul":"🇹🇷", "cairo":"🇪🇬"
+};
+const FLAG_KEYS_SORTED = Object.keys(FLAG_MAP).sort((a,b)=>b.length-a.length);
+function getFlag(text){
+  const t = (text||'').toLowerCase();
+  for(const k of FLAG_KEYS_SORTED){
+    if(t.includes(k)) return FLAG_MAP[k];
+  }
+  return '';
+}
+/* =========================================================================
+   CONFERENCE TRACKS
+   Each conference/company gets its own emoji + color so session rows are
+   visually separated at a glance, without breaking the purple
+   itinerary/activities color family.
+   ========================================================================= */
+const TRACKS = {
+  "Precious Metals Summit": {emoji:"🥇", color:"#92660B", bg:"#FBF0D9"},
+  "Mining Forum Americas":  {emoji:"⛏️", color:"#0F766E", bg:"#E1F5F2"},
+  "Kitco Spotlight":        {emoji:"📣", color:"#BE185D", bg:"#FCE7F3"},
+  "Digging Deep":           {emoji:"🎙️", color:"#4338CA", bg:"#E9E7FD"}
+};
+function trackBadgeHtml(track, label){
+  const t = TRACKS[track] || {emoji:"🎤", color:"#555", bg:"#eee"};
+  const lbl = label ? ' · ' + escapeHtml(label) : '';
+  return `<span class="track-pill" style="color:${t.color};background:${t.bg};">${t.emoji} ${escapeHtml(track)}${lbl}</span>`;
+}
+function escapeHtml(s){
+  return (s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function flagify(text){
+  if(!text) return '';
+  let result = escapeHtml(text);
+  // Insert a flag right before every recognized city name found in the text
+  // (longest names first so "Colorado Springs" is matched before "Colorado").
+  for(const key of FLAG_KEYS_SORTED){
+    const flag = FLAG_MAP[key];
+    const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp('(' + escapedKey + ')', 'gi');
+    result = result.replace(re, (match) => `${flag} ${match}`);
+  }
+  return result;
+}
+
+/* =========================================================================
+   RENDER: HEADER
+   ========================================================================= */
+function renderHeader(){
+  document.getElementById('tripNameEl').textContent = state.trip.name;
+  document.getElementById('tripSubEl').innerHTML = flagify(state.trip.subtitle);
+}
+
+/* =========================================================================
+   RENDER: TODAY TAB
+   ========================================================================= */
+function renderChips(){
+  const strip = document.getElementById('chipStrip');
+  const dates = dateRange(state.trip.startDate, state.trip.endDate);
+  strip.innerHTML = dates.map(iso=>{
+    const c = fmtChip(iso);
+    const active = iso===selectedDate ? ' active' : '';
+    return `<div class="chip${active}" data-date="${iso}" onclick="selectDate('${iso}')">
+      <div class="wd">${c.wd}</div><div class="dn">${c.dn}</div>
+    </div>`;
+  }).join('');
+}
+function scrollChipIntoView(){
+  const el = document.querySelector(`.chip[data-date="${selectedDate}"]`);
+  if(el) el.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+}
+function selectDate(iso){
+  selectedDate = iso;
+  renderToday();
+}
+function shiftDate(delta){
+  const next = addDays(selectedDate, delta);
+  if(next < state.trip.startDate || next > state.trip.endDate) return;
+  selectedDate = next;
+  renderToday();
+}
+function hotelForNight(iso){
+  return state.hotels.find(h => iso >= h.checkIn && iso < h.checkOut) || null;
+}
+function overnightTransitForNight(iso){
+  return state.transit.find(t => t.date===iso && t.overnight) || null;
+}
+function daytimeTransitForDate(iso){
+  return state.transit.filter(t => t.date===iso && !t.overnight);
+}
+function itineraryForDate(iso){
+  return state.itinerary.find(d => d.date===iso) || null;
+}
+
+function activityRowsHtml(activities){
+  return activities.map(a=>{
+    if(a.type === 'session'){
+      return `
+    <div class="act-row session-row">
+      <div class="time">${escapeHtml(a.time)}</div>
+      <div class="session-body">
+        ${trackBadgeHtml(a.track, a.label)}
+        <div class="session-speaker">${escapeHtml(a.speaker)}</div>
+        ${a.role ? `<div class="session-role">${escapeHtml(a.role)}</div>` : ''}
+      </div>
+    </div>`;
+    }
+    return `
+    <div class="act-row">
+      <div class="emoji">${getEmoji(a.text)}</div>
+      <div class="time">${escapeHtml(a.time)}</div>
+      <div class="txt">${escapeHtml(a.text)}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderToday(){
+  renderChips();
+  scrollChipIntoView();
+  document.getElementById('selDateHeading').textContent = fmtLong(selectedDate);
+
+  const day = itineraryForDate(selectedDate);
+  const buses = daytimeTransitForDate(selectedDate);
+  const hotel = hotelForNight(selectedDate);
+  const overnightBus = hotel ? null : overnightTransitForNight(selectedDate);
+
+  let html = '';
+
+  // --- Itinerary box (purple) ---
+  if(day && day.activities.length){
+    html += `<div class="card c-purple">
+      <span class="tag purple">🗓️ Itinerary</span>
+      <h3>${escapeHtml(day.title)}</h3>
+      <div style="margin-top:8px;">${activityRowsHtml(day.activities)}</div>
+    </div>`;
+  } else {
+    html += `<div class="empty">No itinerary planned for this day yet.</div>`;
+  }
+
+  // --- Bus / transit box (orange) — only if a daytime transit exists ---
+  buses.forEach(b=>{
+    html += `<div class="card c-orange">
+      <span class="tag orange">🚐 Transit</span>
+      <div class="route-line">
+        <span class="city">${flagify(b.fromCity)}</span>
+        <span class="arrow">→</span>
+        <span class="city">${flagify(b.toCity)}</span>
+      </div>
+      <div class="meta-row"><b>${escapeHtml(b.mode)}</b> · ${escapeHtml(b.duration)}</div>
+      <div class="meta-row">📍 Departs from: ${escapeHtml(b.departureAddress)}</div>
+      ${b.notes ? `<div class="meta-row">${getEmoji(b.notes)} ${escapeHtml(b.notes)}</div>` : ''}
+    </div>`;
+  });
+
+  // --- Tonight box (green hotel / orange overnight bus / muted empty) ---
+  if(hotel){
+    html += `<div class="card c-green">
+      <span class="tag green">🏨 Tonight</span>
+      <h3>${flagify(hotel.name)}</h3>
+      <div class="sub">${escapeHtml(hotel.address)}</div>
+      <div class="meta-row">🗓️ ${fmtShort(hotel.checkIn)} → ${fmtShort(hotel.checkOut)}</div>
+    </div>`;
+  } else if(overnightBus){
+    html += `<div class="card c-orange">
+      <span class="tag orange">🌙 Overnight Bus</span>
+      <div class="route-line">
+        <span class="city">${flagify(overnightBus.fromCity)}</span>
+        <span class="arrow">→</span>
+        <span class="city">${flagify(overnightBus.toCity)}</span>
+      </div>
+      <div class="meta-row"><b>${escapeHtml(overnightBus.mode)}</b> · ${escapeHtml(overnightBus.duration)}</div>
+      <div class="meta-row">📍 Departs from: ${escapeHtml(overnightBus.departureAddress)}</div>
+    </div>`;
+  } else {
+    html += `<div class="empty">No lodging booked for tonight.</div>`;
+  }
+
+  document.getElementById('todayBoxes').innerHTML = html;
+}
+
+/* =========================================================================
+   RENDER: ITINERARY TAB (read-only)
+   ========================================================================= */
+function renderItinerary(){
+  const el = document.getElementById('itineraryList');
+  if(!state.itinerary.length){
+    el.innerHTML = `<div class="empty">No itinerary days added yet.</div>`;
+    return;
+  }
+  el.innerHTML = state.itinerary.map(day=>`
+    <div class="day-block">
+      <div class="day-label">${fmtShort(day.date)}</div>
+      <div class="card c-purple">
+        <h3>${escapeHtml(day.title)}</h3>
+        <div style="margin-top:8px;">${activityRowsHtml(day.activities)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* =========================================================================
+   RENDER: FLIGHTS TAB
+   ========================================================================= */
+function renderFlights(){
+  const el = document.getElementById('flightsList');
+  if(!state.flights.length){ el.innerHTML = `<div class="empty">No flights added yet.</div>`; return; }
+  const sorted = [...state.flights].sort((a,b)=>a.date.localeCompare(b.date));
+  el.innerHTML = sorted.map(f=>`
+    <div class="card c-blue list-tap" onclick="openSheet('flight','${f.id}')">
+      <span class="tag blue">✈️ Flight · ${fmtShort(f.date)}</span>
+      <div class="route-line">
+        <span class="city">${flagify(f.fromCity)}${f.fromCode ? ' <span class=\"mono\" style=\"font-size:13px;color:var(--muted)\">'+escapeHtml(f.fromCode)+'</span>':''}</span>
+        <span class="arrow">→</span>
+        <span class="city">${flagify(f.toCity)}${f.toCode ? ' <span class=\"mono\" style=\"font-size:13px;color:var(--muted)\">'+escapeHtml(f.toCode)+'</span>':''}</span>
+      </div>
+      <div class="time-grid">
+        <div class="tblock"><div class="lbl">Depart</div><div class="val">${escapeHtml(f.depTime||'—')}</div></div>
+        <div class="tblock"><div class="lbl">Arrive</div><div class="val">${escapeHtml(f.arrTime||'—')}</div></div>
+      </div>
+      ${f.terminal ? `<div class="meta-row">📍 ${escapeHtml(f.terminal)}</div>` : ''}
+      ${(f.airline||f.confirmation) ? `<div class="meta-row">${f.airline?('<b>'+escapeHtml(f.airline)+'</b>'):''}${f.confirmation?' · Conf# '+escapeHtml(f.confirmation):''}</div>` : ''}
+      ${f.price ? `<div class="meta-row">💵 ${escapeHtml(f.price)}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+/* =========================================================================
+   RENDER: HOTELS TAB
+   ========================================================================= */
+function renderHotels(){
+  const el = document.getElementById('hotelsList');
+  if(!state.hotels.length){ el.innerHTML = `<div class="empty">No hotels added yet.</div>`; return; }
+  const sorted = [...state.hotels].sort((a,b)=>a.checkIn.localeCompare(b.checkIn));
+  el.innerHTML = sorted.map(h=>`
+    <div class="card c-green list-tap" onclick="openSheet('hotel','${h.id}')">
+      <span class="tag green">🏨 Hotel</span>
+      <h3>${flagify(h.name)}</h3>
+      <div class="sub">${escapeHtml(h.address)}</div>
+      <div class="time-grid">
+        <div class="tblock"><div class="lbl">Check-in</div><div class="val" style="font-size:15px">${fmtShort(h.checkIn)}</div></div>
+        <div class="tblock"><div class="lbl">Check-out</div><div class="val" style="font-size:15px">${fmtShort(h.checkOut)}</div></div>
+      </div>
+      <div class="meta-row">${escapeHtml(h.checkInTime||'')}${h.checkOutTime? ' → '+escapeHtml(h.checkOutTime):''}</div>
+      ${h.price ? `<div class="meta-row">💵 ${escapeHtml(h.price)}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+/* =========================================================================
+   RENDER: TRANSIT TAB
+   ========================================================================= */
+function renderTransit(){
+  const el = document.getElementById('transitList');
+  if(!state.transit.length){ el.innerHTML = `<div class="empty">No transit legs added yet.</div>`; return; }
+  const sorted = [...state.transit].sort((a,b)=>a.date.localeCompare(b.date));
+  el.innerHTML = sorted.map(t=>`
+    <div class="card c-orange list-tap" onclick="openSheet('transit','${t.id}')">
+      <span class="tag orange">🚐 ${escapeHtml(t.mode||'Transit')} · ${fmtShort(t.date)}${t.overnight?' · Overnight':''}</span>
+      <div class="route-line">
+        <span class="city">${flagify(t.fromCity)}</span>
+        <span class="arrow">→</span>
+        <span class="city">${flagify(t.toCity)}</span>
+      </div>
+      <div class="meta-row">⏱️ ${escapeHtml(t.duration||'—')}</div>
+      ${t.departureAddress ? `<div class="meta-row">📍 Departs from: ${escapeHtml(t.departureAddress)}</div>` : ''}
+      ${t.notes ? `<div class="meta-row">${getEmoji(t.notes)} ${escapeHtml(t.notes)}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+/* =========================================================================
+   BOTTOM SHEET (add / edit / delete for flights, hotels, transit)
+   ========================================================================= */
+const SHEET_FIELDS = {
+  flight:[
+    {k:'fromCity', l:'From (city)', t:'text'},
+    {k:'fromCode', l:'From airport code', t:'text'},
+    {k:'toCity', l:'To (city)', t:'text'},
+    {k:'toCode', l:'To airport code', t:'text'},
+    {k:'date', l:'Date', t:'date'},
+    {k:'depTime', l:'Departure time', t:'text', ph:'e.g. 18:40'},
+    {k:'arrTime', l:'Arrival time', t:'text', ph:'e.g. 20:17'},
+    {k:'airline', l:'Airline', t:'text'},
+    {k:'confirmation', l:'Confirmation #', t:'text'},
+    {k:'price', l:'Price', t:'text'},
+    {k:'terminal', l:'Airport / terminal', t:'text'}
+  ],
+  hotel:[
+    {k:'name', l:'Hotel name', t:'text'},
+    {k:'address', l:'Full address', t:'text'},
+    {k:'checkIn', l:'Check-in date', t:'date'},
+    {k:'checkInTime', l:'Check-in time', t:'text', ph:'e.g. 4:00 PM (MDT)'},
+    {k:'checkOut', l:'Check-out date', t:'date'},
+    {k:'checkOutTime', l:'Check-out time', t:'text', ph:'e.g. 11:00 AM (MDT)'},
+    {k:'price', l:'Price / payment notes', t:'text'}
+  ],
+  transit:[
+    {k:'mode', l:'Mode (bus / train / ferry / drive)', t:'text'},
+    {k:'fromCity', l:'From (city)', t:'text'},
+    {k:'toCity', l:'To (city)', t:'text'},
+    {k:'date', l:'Date', t:'date'},
+    {k:'duration', l:'Duration', t:'text', ph:'e.g. 2h 30m'},
+    {k:'departureAddress', l:'Departure station / address', t:'text'},
+    {k:'notes', l:'Notes', t:'textarea'},
+    {k:'overnight', l:'Overnight (sleeping on this transit)', t:'checkbox'}
+  ]
+};
+const SHEET_TITLES = {flight:'Flight', hotel:'Hotel', transit:'Transit leg'};
+const SHEET_STORE = {flight:'flights', hotel:'hotels', transit:'transit'};
+
+function openSheet(type, id){
+  editingType = type;
+  editingId = id || null;
+  const fields = SHEET_FIELDS[type];
+  const item = editingId ? state[SHEET_STORE[type]].find(x=>x.id===editingId) : null;
+
+  let fieldsHtml = fields.map(f=>{
+    const val = item ? (item[f.k] ?? '') : '';
+    if(f.t === 'textarea'){
+      return `<div class="field"><label>${f.l}</label><textarea id="f_${f.k}">${escapeHtml(val)}</textarea></div>`;
+    }
+    if(f.t === 'checkbox'){
+      return `<div class="field" style="display:flex;align-items:center;gap:8px;">
+        <input type="checkbox" id="f_${f.k}" ${val? 'checked':''} style="width:18px;height:18px;">
+        <label style="margin:0;">${f.l}</label>
+      </div>`;
+    }
+    return `<div class="field"><label>${f.l}</label><input id="f_${f.k}" type="${f.t}" value="${escapeHtml(val)}" placeholder="${f.ph||''}"></div>`;
+  }).join('');
+
+  document.getElementById('sheetBody').innerHTML = `
+    <h2>${editingId ? 'Edit' : 'Add'} ${SHEET_TITLES[type]}</h2>
+    <form onsubmit="return false;">
+      ${fieldsHtml}
+      <div class="sheet-actions">
+        ${editingId ? `<button type="button" class="btn danger" onclick="deleteSheetItem()">Delete</button>` : ''}
+        <button type="button" class="btn ghost" onclick="closeSheet()">Cancel</button>
+        <button type="button" class="btn primary" onclick="saveSheetItem()">Save</button>
+      </div>
+    </form>
+  `;
+  document.getElementById('overlay').classList.add('show');
+}
+function closeSheet(){
+  document.getElementById('overlay').classList.remove('show');
+  editingType = null; editingId = null;
+}
+function saveSheetItem(){
+  const type = editingType;
+  const fields = SHEET_FIELDS[type];
+  const obj = editingId ? {...state[SHEET_STORE[type]].find(x=>x.id===editingId)} : {id:uid()};
+  for(const f of fields){
+    const el = document.getElementById('f_'+f.k);
+    obj[f.k] = f.t==='checkbox' ? el.checked : el.value.trim();
+  }
+  const arr = state[SHEET_STORE[type]];
+  const idx = arr.findIndex(x=>x.id===obj.id);
+  if(idx>=0) arr[idx] = obj; else arr.push(obj);
+  saveState();
+  closeSheet();
+  renderTabContent(currentTab);
+  if(currentTab==='today') renderToday();
+  showToast('Saved');
+}
+function deleteSheetItem(){
+  if(!confirm('Delete this entry?')) return;
+  const type = editingType;
+  const arr = state[SHEET_STORE[type]];
+  const idx = arr.findIndex(x=>x.id===editingId);
+  if(idx>=0) arr.splice(idx,1);
+  saveState();
+  closeSheet();
+  renderTabContent(currentTab);
+  if(currentTab==='today') renderToday();
+  showToast('Deleted');
+}
+
+/* =========================================================================
+   TOAST
+   ========================================================================= */
+let toastTimer = null;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 1800);
+}
+
+/* =========================================================================
+   TAB SWITCHING
+   ========================================================================= */
+function renderTabContent(tab){
+  if(tab==='today') renderToday();
+  else if(tab==='itinerary') renderItinerary();
+  else if(tab==='flights') renderFlights();
+  else if(tab==='hotels') renderHotels();
+  else if(tab==='transit') renderTransit();
+}
+function goToToday(){
+  selectedDate = clampToRange(todayISO());
+  switchTab('today');
+}
+function switchTab(tab){
+  currentTab = tab;
+  document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));
+  document.getElementById('view-'+tab).classList.remove('hidden');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  renderTabContent(tab);
+}
+function renderAll(){
+  renderHeader();
+  renderTabContent(currentTab);
+}
+
+/* =========================================================================
+   INIT
+   ========================================================================= */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=> switchTab(btn.dataset.tab));
+});
+document.getElementById('prevDay').addEventListener('click', ()=>shiftDate(-1));
+document.getElementById('nextDay').addEventListener('click', ()=>shiftDate(1));
+
+renderAll();
+
+/* =========================================================================
+   PWA manifest via Blob (keeps this a single self-contained file)
+   ========================================================================= */
+(function(){
+  try{
+    const iconDataUri = document.querySelector('link[rel="icon"]').href;
+    const manifest = {
+      name: state.trip.name,
+      short_name: state.trip.name.slice(0,12),
+      start_url: ".",
+      display: "standalone",
+      background_color: "#0B1229",
+      theme_color: "#0B1229",
+      icons: [
+        {src: iconDataUri, sizes:"192x192", type:"image/png"},
+        {src: iconDataUri, sizes:"512x512", type:"image/png"}
+      ]
+    };
+    const blob = new Blob([JSON.stringify(manifest)], {type:'application/manifest+json'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('link');
+    link.rel = 'manifest';
+    link.href = url;
+    document.head.appendChild(link);
+  }catch(e){ /* manifest is a progressive enhancement, ignore failures */ }
+})();
+</script>
+</body>
+</html>
