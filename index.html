@@ -84,7 +84,7 @@
   .header{
     background:linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
     color:#fff;
-    padding:26px 20px 22px;
+    padding:calc(20px + env(safe-area-inset-top)) 20px 22px;
     position:sticky;
     top:0;
     z-index:20;
@@ -1190,7 +1190,10 @@ function renderAll(){
    INIT
    ========================================================================= */
 document.querySelectorAll('.tab-btn').forEach(btn=>{
-  btn.addEventListener('click', ()=> switchTab(btn.dataset.tab));
+  btn.addEventListener('click', ()=>{
+    if(btn.dataset.tab === 'today') goToToday();
+    else switchTab(btn.dataset.tab);
+  });
 });
 document.getElementById('prevDay').addEventListener('click', ()=>shiftDate(-1));
 document.getElementById('nextDay').addEventListener('click', ()=>shiftDate(1));
